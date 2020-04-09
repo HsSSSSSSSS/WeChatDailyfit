@@ -1,0 +1,116 @@
+/* pages/slim/slim.wxss */
+.slim_img_wrap {
+    width: 100vw;
+    height: 40vh;
+    background-color: #F7F7F7;
+    position: relative;
+    .slim_bg {
+        width: 100vw;
+        height: 40vh;
+        filter: blur(10rpx);
+    }
+  
+    .slim_text_wrap {
+        position: absolute;
+        left:50%;
+        transform: translate(-50%);
+        top: 20%;
+        text-align: center;
+        color: #fff;
+        display: flex;
+        width: 600rpx;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      .text_title {
+        font-size: 45rpx;
+        font-weight: 600;
+        text-align: center;
+        color: #fff;
+        padding-top: 40rpx;
+      }
+      .text_content {
+          display: flex;
+          width: 600rpx;
+          margin-top: 100rpx;
+        .content_time {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+          .time_text {
+            font-size: 35rpx;
+            font-weight: 400;
+          }
+      
+          .time_num {
+            font-size: 24rpx;
+          }
+        }
+      
+        .content_week {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          .week_text {
+            font-size: 35rpx;
+            font-weight: 400;
+          }
+      
+          .week_num {
+            font-size: 24rpx;
+          }
+        }
+      
+        .content_daily {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+          .daliy_text {
+            font-size: 35rpx;
+            font-weight: 400;
+          }
+      
+          .daily_num {
+            font-size: 24rpx;
+          }
+        }
+      }
+    }
+}
+.slim_introduce_wrap {
+  margin-left: 30rpx;
+  .introduce_text {
+    font-size: 28rpx;
+    padding-top: 10rpx;
+    .text_css{
+      border-bottom: 2rpx solid #8B7765;
+      font-size: 35rpx;
+      font-weight: 600;
+    }
+  }
+}
+.slim_btn_wrap{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 110rpx;
+    background-color: #fff;
+    display: flex;
+    border-top: 1rpx solid #ccc;
+    .slim_btn{
+      width: 400rpx;
+      left:45%;
+      color: #fff;
+      background-color: #8B7765;
+      margin-top: 10rpx;
+    }
+}

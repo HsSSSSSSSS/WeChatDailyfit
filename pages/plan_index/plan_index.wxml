@@ -1,0 +1,38 @@
+<view class="header_wrap">
+    <view class="header_title text1">训练计划</view>
+    <view class="header_title text2">高效达成塑形计</view>
+    <view class="header_content view1"> ·个性全身计划 </view>
+    <view class="header_content view2">·部位突破计划</view>
+</view>
+<view class="plan_content_wrap">
+    <navigator url="/pages/made/made">
+        <view class="plan_content_item plan">
+            <view class="item_text">个性塑形计划</view>
+            <view class="item_date">11周/每周三天/每天10~20分钟</view>
+        </view>
+    </navigator>
+    <navigator url="/pages/slim/slim">
+        <view class="plan_content_item duzi">
+            <view class="item_text">告别小肚子</view>
+            <view class="item_date">5周/每周三天/每天20分钟</view>
+        </view>
+    </navigator>
+    <navigator url="/pages/slim/slim">
+        <view class="plan_content_item tianejing">
+            <view class="item_text">天鹅颈打造计划</view>
+            <view class="item_date">4周/每周四天/每天20分钟</view>
+        </view>
+    </navigator>
+    <navigator url="/pages/slim/slim">
+        <view class="plan_content_item majiaxian">
+            <view class="item_text">马甲线突击计划</view>
+            <view class="item_date">4周/每周四天/每天20分钟</view>
+        </view>
+    </navigator>
+    <navigator url="/pages/slim/slim">
+        <view class="plan_content_item shoutui">
+            <view class="item_text">瘦腿计划</view>
+            <view class="item_date">5周/每周四天/每天20分钟</view>
+        </view>
+    </navigator>
+</view>

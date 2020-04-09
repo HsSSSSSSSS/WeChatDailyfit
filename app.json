@@ -1,0 +1,71 @@
+{
+  "pages": [
+    "pages/plan_index/plan_index", 
+    "pages/shop_index/shop_index",
+    "pages/social_index/social_index",
+    "pages/vivid_index/vivid_index",
+    "pages/mine_index/mine_index",
+    "pages/goods_detail/goods_detail",
+    "pages/cart/cart",
+    "pages/collect/collect",
+    "pages/order/order",
+    "pages/login/login",
+    "pages/auth/auth",
+    "pages/pay/pay",
+    "pages/search/search",
+    "pages/made/made",
+    "pages/slim/slim",
+    "pages/course/course",
+    "pages/dynamic/dynamic",
+    "pages/write/write"
+  ],
+  "window": {   
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "每日益减",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#8B3A3A",
+    "backgroundColor": "#E8E8E8",
+    "position": "bottom",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/social_index/social_index",
+        "text": "社区",
+        "iconPath": "icons/social_before.png",
+        "selectedIconPath": "icons/social_after.png"
+      },
+      {
+        "pagePath": "pages/vivid_index/vivid_index",
+        "text": "签到打卡",
+        "iconPath": "icons/vivid_before.png",
+        "selectedIconPath": "icons/vivid_after.png"
+      },
+      {
+        "pagePath": "pages/plan_index/plan_index",
+        "text": "计划",
+        "iconPath": "icons/plan_before.png",
+        "selectedIconPath": "icons/plan_after.png"
+      },
+      {
+        "pagePath": "pages/shop_index/shop_index",
+        "text": "运动商城",
+        "iconPath": "icons/shop_before.png",
+        "selectedIconPath": "icons/shop_after.png"
+      },     
+      {
+        "pagePath": "pages/mine_index/mine_index",
+        "text": "我的",
+        "iconPath": "icons/mine_before.png",
+        "selectedIconPath": "icons/mine_after.png"
+      }
+    ]
+  },
+  
+    
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,76 @@
+<view class="slim_img_wrap">
+    <image class="slim_bg" src="http://img2.imgtn.bdimg.com/it/u=926260431,4091377755&fm=26&gp=0.jpg" />
+    <view class="slim_text_wrap">
+        <view class="text_title">瘦腿计划</view>
+        <view class="text_content">
+            <view class="content_time">
+                <view class="time_text">计划时长</view>
+                <view class="time_num">5周</view>
+            </view>
+            <view class="content_week">
+                <view class="week_text">每周训练</view>
+                <view class="week_num">4天</view>
+            </view>
+            <view class="content_daily">
+                <view class="daliy_text">每天训练</view>
+                <view class="daliy_num">20分钟</view>
+            </view>
+        </view>
+    </view>
+</view>
+<Tabs tabs="{{tabs}}" bindtabsItemChange="handleTabsItemChange">
+    <block wx:if="{{tabs[0].isActive}}">
+        <view class="slim_introduce_wrap">
+            <view class="introduce_text">无论裤装还是裙装</view>
+            <view class="introduce_text">纤细美腿总是标配</view>
+            <view class="introduce_text">【瘦腿训练】练到晕厥脂肪掉的不够快</view>
+            <view class="introduce_text">每天跑步可还是腿粗</view>
+            <view class="introduce_text">有没有什么方法<text class="text_css">又减脂肪又瘦腿</text></view>
+            <text>\n\n</text>
+            <view class="introduce_text">有，还真有</view>
+            <view class="introduce_text">试试这套<text class="text_css">【瘦腿计划】</text></view>
+            <view class="introduce_text"></view>
+        </view>
+    </block>
+    <block wx:elif="{{tabs[1].isActive}}">
+        <view class="cu-timeline">
+            <view class="cu-time">第一周</view>
+                <view class="cu-item">
+                    <view class="content">
+                    <text>第一天</text> 【喵星】 MX-12138 已揽收，准备发往银河系
+                    </view>
+                    <view class="content">
+                    <text>第二天</text> 【喵星】 MX-12138 已揽收，准备发往银河系
+                    </view>
+                    <view class="content">
+                    <text>第三天</text> 【喵星】 MX-12138 已揽收，准备发往银河系
+                    </view>
+                    <view class="content">
+                    <text>第四天</text> 【喵星】 MX-12138 已揽收，准备发往银河系
+                    </view>
+            </view>
+        </view>
+        <view class="cu-timeline">
+            <view class="cu-time">第二周</view>
+                <view class="cu-item">
+                    <view class="content">
+                    <text>第一天</text> 【喵星】 MX-12138 已揽收，准备发往银河系
+                    </view>
+                    <view class="content">
+                    <text>第二天</text> 【喵星】 MX-12138 已揽收，准备发往银河系
+                    </view>
+                    <view class="content">
+                    <text>第三天</text> 【喵星】 MX-12138 已揽收，准备发往银河系
+                    </view>
+                    <view class="content">
+                    <text>第四天</text> 【喵星】 MX-12138 已揽收，准备发往银河系
+                    </view>
+            </view>
+        </view>
+    </block>
+</Tabs>
+<view class="slim_btn_wrap">
+    <navigator url="/pages/course/course">
+        <button plain="{{true}}" class="slim_btn">加入课程</button>
+    </navigator>
+</view>

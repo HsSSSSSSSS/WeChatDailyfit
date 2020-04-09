@@ -1,0 +1,9 @@
+/* pages/write/write.wxss */
+.write_btn{
+    font-size: 30rpx;
+    width: 80rpx;
+
+}
+.title{
+    font-weight: 600;
+}

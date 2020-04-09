@@ -1,0 +1,51 @@
+<view class="detail_swiper">
+    <swiper autoplay="{{true}}" circular="{{true}}" indicator-dots="{{true}}">
+        <swiper-item bindtap="bindPreviewImage">
+            <image mode="widthFix" src="{{goodsImg1}}" />
+        </swiper-item>
+        <swiper-item bindtap="bindPreviewImage">
+            <image mode="widthFix" src="{{goodsImg2}}" />
+        </swiper-item>
+        <swiper-item bindtap="bindPreviewImage">
+            <image mode="widthFix" src="{{goodsImg3}}" />
+        </swiper-item>
+        <swiper-item bindtap="bindPreviewImage">
+            <image mode="widthFix" src="{{goodsImg4}}" />
+        </swiper-item>
+        <swiper-item bindtap="bindPreviewImage">
+            <image mode="widthFix" src="{{goodsImg5}}" />
+        </swiper-item>
+    </swiper>
+</view>
+<view class="goods_price">￥{{goodsPrice}}</view>
+<view class="goods_name_row">
+    <view class="goods_name">{{goodsName}}</view>
+    <view class="goods_collect">
+        <text class="iconfont icon-shoucang:before"></text>
+        <view class="collect_text">收藏</view>
+    </view>
+</view>
+<view class="goods_info">
+   <view class="goods_info_title">图文详情</view>
+   <view class="goods_info_content">
+       <rich-text nodes="{{html}}"></rich-text>
+   </view>
+</view>
+<view class="btn_tool">
+    <view class="tool_item">
+        <view class="iconfont icon-fabu-:before"></view>
+        <view>分享</view>   
+        <button open-type="share"></button> 
+    </view>
+    <navigator url="/pages/cart/cart" class="tool_item">
+        <view class="iconfont icon-ziyuan:before"></view>
+        <view>购物车</view>    
+    </navigator>
+    <view class="tool_item btn_cart" bindtap="handleCartAdd">
+        加入购物车   
+    </view>
+    <view class="tool_item btn_buy">
+        立即购买 
+    </view>
+</view>
+

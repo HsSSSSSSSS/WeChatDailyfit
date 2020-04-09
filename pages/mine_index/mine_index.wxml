@@ -1,0 +1,53 @@
+<view class="user_info_wrap">
+    <view class="user_img_wrap" wx:if="{{userinfo.nickName}}">
+        <image class="user_bg" src="{{userinfo.avatarUrl}}"></image>
+        <view class="user_info">
+            <image class="user_icon" src="{{userinfo.avatarUrl}}" mode="widthFix"/>
+            <view class="user_name">{{userinfo.nickName}}</view>
+        </view>
+    </view>
+    <view class="user_btn" wx:else>
+        <navigator url="/pages/login/login">登陆</navigator>
+    </view>
+</view>
+<view class="user_content">
+    <view class="user_main">
+        <view class="user_util_wrap">
+            <view class="util_title">我的工具</view>
+            <view class="util_content">
+                <navigator>
+                    <view class="iconfont icon-course:before"></view>
+                    <view class="util_name">我的课程</view>
+                </navigator>
+                <navigator>
+                    <view class="iconfont icon-shoucang1:before"></view>
+                    <view class="util_name">我的收藏</view>
+                </navigator>
+                <navigator url="/pages/cart/cart">
+                    <view class="iconfont icon-gouwuche1:before"></view>
+                    <view class="util_name">购物车</view>
+                </navigator>
+                <navigator url="/pages/order/order">
+                    <view class="iconfont icon-yixianshi-:before"></view>
+                    <view class="util_name">我的订单</view>
+                </navigator>
+            </view>
+        </view>
+        <view class="address_wrap">
+            收货地址管理
+        </view>
+        <view class="appinfo_wrap">
+            <view class="appinfo_wrap_item appinfo_contact">
+                <text>联系客服</text>
+                <text>13015923980</text>
+            </view>
+            <view class="appinfo_wrap_item">
+                意见反馈
+            </view>
+            <view class="appinfo_wrap_item">
+                关于我们
+            </view>
+        </view>
+        <view class="recommend_wrap">把应用推荐给其他人</view>
+    </view>
+</view>
