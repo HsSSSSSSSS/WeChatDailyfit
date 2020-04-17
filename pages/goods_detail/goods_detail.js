@@ -100,5 +100,35 @@ Page({
          })
        }
      })
-   }
+   },
+  //  handleBuy(e){
+  //    var that = this;
+  //   var cartThis = wx.getStorageSync('cartThis') || []
+  //    //判断购物车缓存中是否已存在该货品
+  //    var exist = cartThis.find(function (ele) {
+  //     return ele.id === that.data.goodsId
+  //   })
+  //   if (exist) {
+  //     //如果存在，则增加该货品的购买数量
+  //     exist.quantity = parseInt(exist.quantity) + 1
+  //   } else {
+  //     //如果不存在，传入该货品信息
+  //     cartThis.push({
+  //       id: that.data.goodsId,
+  //       quantity: 1,
+  //       checked:true,
+  //       price: that.data.goodsPrice,
+  //       title: that.data.goodsName,
+  //       goodsPicsInfo: that.data.goodsImg1
+  //     })
+  //   }
+  //   //加入购物车数据，存入缓存
+  //   wx.setStorage({
+  //     key: 'cartThis',
+  //     data: cartThis
+  //   }) 
+  //   wx.redirectTo({
+  //     url: '/pages/payThis/payThis',
+  //   })
+  //  }
 })

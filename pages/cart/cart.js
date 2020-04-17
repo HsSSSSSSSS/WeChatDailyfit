@@ -61,8 +61,6 @@ Page({
           });
             
         }
-
-
       },
       fail: () => {},
       complete: () => {}
@@ -220,7 +218,7 @@ Page({
       return;
     }
     //跳转到支付页面
-    wx.navigateTo({
+    wx.redirectTo({
       url: '/pages/pay/pay',
     });
       

@@ -6,6 +6,11 @@ Page({
    */
   data: {
 
+    weekNum:6,
+    fate:"3天",
+    daily:"15分钟",
+    plan:'',
+
   },
 
   /**

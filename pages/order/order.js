@@ -5,22 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    tabs:[
-      {
-        id:0,
-        value:"全部订单",
-        isActive:true
-      },{
-        id:1,
-        value:"未付款",
-        isActive:false
-      },{
-        id:2,
-        value:"待发货",
-        isActive:false
-      }
-    ],
-
+    list:[]
   },
   onLoad(options){
     console.log(options);
@@ -52,7 +37,34 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    var that = this;
+    const userinfo = wx.getStorageSync("userinfo");
+    var username = userinfo.nickName;
+    wx.request({
+      url: 'http://localhost:8080/orderList',
+      data: {"username":username},
+      header: {'content-type':'application/json'},
+      method: 'GET',
+      dataType: 'json',
+      responseType: 'text',
+      success: function(res){
+          var list = res.data.orderList;
+          if(list ==null){
+            var toastText = '获取数据失败';
+            wx.showToast({
+              title: 'toastText',
+              icon: '',
+              duration: 1500,
+            });       
+          }else{
+            that.setData({
+              list: list
+            });
+          }
+      },
+      fail: () => {},
+      complete: () => {}
+    });
   },
 
   /**

@@ -1,13 +1,15 @@
 // pages/mine_index/mine_index.js
 Page({
   data: {
-    userinfo:{}
+    userinfo:{},
   },
   onShow(){
+    var that = this
     const userinfo = wx.getStorageSync("userinfo");
-    this.setData({
-      userinfo
-    })
+    that.setData({
+      userinfo,
+    })    
+    
       
   }
 })

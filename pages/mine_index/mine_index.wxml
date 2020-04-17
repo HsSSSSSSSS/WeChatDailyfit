@@ -15,7 +15,7 @@
         <view class="user_util_wrap">
             <view class="util_title">我的工具</view>
             <view class="util_content">
-                <navigator>
+                <navigator url="/pages/myCourse/myCourse">
                     <view class="iconfont icon-course:before"></view>
                     <view class="util_name">我的课程</view>
                 </navigator>

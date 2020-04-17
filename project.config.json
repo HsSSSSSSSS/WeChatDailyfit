@@ -140,6 +140,19 @@
 					"pathName": "pages/pay/pay",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "计划",
+					"pathName": "pages/plan_index/plan_index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的课程",
+					"pathName": "pages/myCourse/myCourse",
+					"scene": null
 				}
 			]
 		}

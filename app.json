@@ -17,7 +17,8 @@
     "pages/slim/slim",
     "pages/course/course",
     "pages/dynamic/dynamic",
-    "pages/write/write"
+    "pages/write/write",
+    "pages/myCourse/myCourse"
   ],
   "window": {   
     "backgroundTextStyle": "light",

@@ -1,0 +1,18 @@
+<view class="cu-card case no-card">
+  <view class="cu-item shadow" wx:for="{{planList}}">
+    <view class="image">
+      <image wx:if="{{item.definition == plan1}}" src="http://img2.imgtn.bdimg.com/it/u=926260431,4091377755&fm=26&gp=0.jpg" mode="widthFix" class="planImg"/>
+      <image wx:elif="{{item.definition == plan2}}" src="https://s2.ax1x.com/2020/03/10/8iSF56.jpg" mode="widthFix"/>
+      <image wx:elif="{{item.definition == plan3}}" src="https://s2.ax1x.com/2020/03/10/8PxKQH.jpg" mode="widthFix"/>
+      <image wx:elif="{{item.definition == plan4}}" src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1355376335,4122789604&fm=26&gp=0.jpg" mode="widthFix"/>
+      <image wx:elif="{{item.definition == plan5}}" src="https://s2.ax1x.com/2020/03/10/8iSAPK.jpg" mode="widthFix"/>
+      <view class="cu-bar bg-shadeBottom">
+        <text class="text-cut">计划类型：{{item.definition}}</text>
+        <text class="text-cut">本计划剩余时间：{{item.totalFate}}天</text>
+      </view>
+    </view>
+    <view class="cu-list menu-avatar" >
+        <button class="GoToPlan" bindtap="GoToPlan" data-id="{{item.pid}}">进入课程</button>
+    </view>
+  </view>
+</view>

@@ -8,31 +8,31 @@
     <navigator url="/pages/made/made">
         <view class="plan_content_item plan">
             <view class="item_text">个性塑形计划</view>
-            <view class="item_date">11周/每周三天/每天10~20分钟</view>
+            <view class="item_date">根据您的需求为您定制</view>
         </view>
     </navigator>
-    <navigator url="/pages/slim/slim">
+    <navigator url="/pages/slim/slim?plan_id={{1}}">
         <view class="plan_content_item duzi">
             <view class="item_text">告别小肚子</view>
-            <view class="item_date">5周/每周三天/每天20分钟</view>
+            <view class="item_date">{{weekNum}}周/每周{{fate}}/每天{{daily}}</view>
         </view>
     </navigator>
-    <navigator url="/pages/slim/slim">
+    <navigator url="/pages/slim/slim?plan_id={{2}}">
         <view class="plan_content_item tianejing">
             <view class="item_text">天鹅颈打造计划</view>
-            <view class="item_date">4周/每周四天/每天20分钟</view>
+            <view class="item_date">{{weekNum}}周/每周{{fate}}/每天{{daily}}</view>
         </view>
     </navigator>
-    <navigator url="/pages/slim/slim">
+    <navigator url="/pages/slim/slim?plan_id={{3}}">
         <view class="plan_content_item majiaxian">
             <view class="item_text">马甲线突击计划</view>
-            <view class="item_date">4周/每周四天/每天20分钟</view>
+            <view class="item_date">{{weekNum}}周/每周{{fate}}/每天{{daily}}</view>
         </view>
     </navigator>
-    <navigator url="/pages/slim/slim">
+    <navigator url="/pages/slim/slim?plan_id={{4}}">
         <view class="plan_content_item shoutui">
             <view class="item_text">瘦腿计划</view>
-            <view class="item_date">5周/每周四天/每天20分钟</view>
+            <view class="item_date">{{weekNum}}周/每周{{fate}}/每天{{daily}}</view>
         </view>
     </navigator>
 </view>

@@ -5,14 +5,30 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    list:[],
+    week:'',
+    daily:'',
+    plan:'',
+    weekNum:''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var that = this;
+    var list = JSON.parse(options.list);
+    var week = JSON.parse(options.week);
+    var daily = JSON.parse(options.daily);
+    var plan = options.plan;
+    var weekNum = options.weekNum
+    that.setData({
+      list: list,
+      week: week,
+      daily: daily,
+      plan: plan,
+      weekNum: weekNum
+    });
   },
 
   /**

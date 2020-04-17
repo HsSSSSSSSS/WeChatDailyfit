@@ -1,19 +1,19 @@
 <view class="slim_img_wrap">
     <image class="slim_bg" src="http://img2.imgtn.bdimg.com/it/u=926260431,4091377755&fm=26&gp=0.jpg" />
     <view class="slim_text_wrap">
-        <view class="text_title">瘦腿计划</view>
+        <view class="text_title">{{plan}}计划</view>
         <view class="text_content">
             <view class="content_time">
                 <view class="time_text">计划时长</view>
-                <view class="time_num">5周</view>
+                <view class="time_num">{{weekNum}}周</view>
             </view>
             <view class="content_week">
                 <view class="week_text">每周训练</view>
-                <view class="week_num">4天</view>
+                <view class="week_num">{{fate}}</view>
             </view>
             <view class="content_daily">
                 <view class="daliy_text">每天训练</view>
-                <view class="daliy_num">20分钟</view>
+                <view class="daliy_num">{{daily}}</view>
             </view>
         </view>
     </view>
@@ -36,41 +36,13 @@
         <view class="cu-timeline">
             <view class="cu-time">第一周</view>
                 <view class="cu-item">
-                    <view class="content">
-                    <text>第一天</text> 【喵星】 MX-12138 已揽收，准备发往银河系
-                    </view>
-                    <view class="content">
-                    <text>第二天</text> 【喵星】 MX-12138 已揽收，准备发往银河系
-                    </view>
-                    <view class="content">
-                    <text>第三天</text> 【喵星】 MX-12138 已揽收，准备发往银河系
-                    </view>
-                    <view class="content">
-                    <text>第四天</text> 【喵星】 MX-12138 已揽收，准备发往银河系
-                    </view>
-            </view>
-        </view>
-        <view class="cu-timeline">
-            <view class="cu-time">第二周</view>
-                <view class="cu-item">
-                    <view class="content">
-                    <text>第一天</text> 【喵星】 MX-12138 已揽收，准备发往银河系
-                    </view>
-                    <view class="content">
-                    <text>第二天</text> 【喵星】 MX-12138 已揽收，准备发往银河系
-                    </view>
-                    <view class="content">
-                    <text>第三天</text> 【喵星】 MX-12138 已揽收，准备发往银河系
-                    </view>
-                    <view class="content">
-                    <text>第四天</text> 【喵星】 MX-12138 已揽收，准备发往银河系
+                    <view class="content" wx:for="{{list}}" data-index = "{{index}}">
+                    <text>第{{index+1}}天   {{item.motionTitle}}</text>
                     </view>
             </view>
         </view>
     </block>
 </Tabs>
 <view class="slim_btn_wrap">
-    <navigator url="/pages/course/course">
-        <button plain="{{true}}" class="slim_btn">加入课程</button>
-    </navigator>
+        <button plain="{{true}}" class="slim_btn" bindtap="goToPlan">加入课程</button>
 </view>

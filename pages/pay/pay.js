@@ -27,15 +27,33 @@ Page({
     })      
   },
   handlePay(){
+    var that = this;
+    var orderPrice = that.data.totalPrice;
+    var username = "Hs-";
+    console.log(orderPrice);
+    console.log(username);
     wx.showToast({
       title: "支付成功",
       icon: "success",
       durantion: 2000,
       success: function () {
-        wx.navigateTo({
-            url: '/pages/cart/cart',
-          })
       }
     })
+    let newCart = wx.getStorageSync("cartItems")||[];
+    //过滤后的购物车数组
+    newCart = newCart.filter(v=>!v.checked);
+    wx.setStorageSync("cartItems", newCart);
+    wx.redirectTo({
+      url: '/pages/cart/cart',
+    })
+    wx.request({
+      url: 'http://localhost:8080/insertOrder',
+      data: {username,orderPrice},
+      header: {'content-type':'application/json'},
+      method: 'GET',
+      dataType: 'json',
+      responseType: 'text',
+    });
+      
   }
 })

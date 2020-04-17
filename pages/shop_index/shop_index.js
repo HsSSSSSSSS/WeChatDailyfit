@@ -18,7 +18,8 @@ Page({
         isActive:false
       }
     ],
-    list:[]
+    list:[],
+    listAsc:[],
   },
   QueryParams:{
     query:"",
@@ -65,6 +66,31 @@ Page({
       complete: () => {}
     });
       
+    wx.request({
+      url: 'http://localhost:8080/goodsAsc',
+      data: {},
+      header: {'content-type':'application/json'},
+      method: 'GET',
+      dataType: 'json',
+      responseType: 'text',
+      success: function(res){
+          var listAsc = res.data.goodsList;
+          if(listAsc ==null){
+            var toastText = '获取数据失败';
+            wx.showToast({
+              title: toastText,
+              icon: '',
+              duration: 1500,
+            });       
+          }else{
+            that.setData({
+              listAsc: listAsc
+            });
+          }
+      },
+      fail: () => {},
+      complete: () => {}
+    });
   },
   
 });

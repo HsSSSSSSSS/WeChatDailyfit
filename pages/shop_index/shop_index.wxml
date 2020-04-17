@@ -38,15 +38,15 @@
         </block>
         <block wx:elif="{{tabs[1].isActive}}">
             <view class="second_tab">
-                <navigator class="goods_item">
+                <navigator wx:for="{{listAsc}}" class="goods_item"  url="/pages/goods_detail/goods_detail?goodsId={{item.goodsId}}">
                     <!-- 左侧图片容器结构 -->
                     <view class="goods_img_wrap">
-                        <image mode="widthFix" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1583226804773&di=37aa1f1d781735e7eb88d442609cdb8b&imgtype=0&src=http%3A%2F%2Fimg.pconline.com.cn%2Fimages%2Fupload%2Fupc%2Ftx%2Fpc_best%2F2002%2F03%2Fc51%2F190933856_1580699801612_255x255.jpg" />
+                        <image mode="widthFix" src="{{item.goodsImg1}}" />
                     </view>
                     <!-- 右侧商品容器结构 -->
                     <view class="goods_info_wrap">
-                        <view class="goods_name">仰卧起坐器4</view>
-                        <view class="goods_price">￥3999</view>
+                        <view class="goods_name">{{item.goodsName}}</view>
+                        <view class="goods_price">￥{{item.goodsPrice}}</view>
                     </view>
                 </navigator>
             </view>

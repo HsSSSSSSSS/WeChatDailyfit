@@ -1,9 +1,8 @@
 /* pages/write/write.wxss */
-.write_btn{
-    font-size: 30rpx;
-    width: 80rpx;
-
-}
 .title{
     font-weight: 600;
+}
+.write_btn{
+    margin-top: 100rpx;
+    margin-left: 200rpx;
 }
