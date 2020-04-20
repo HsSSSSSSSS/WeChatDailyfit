@@ -20,8 +20,8 @@
 <view class="goods_price">￥{{goodsPrice}}</view>
 <view class="goods_name_row">
     <view class="goods_name">{{goodsName}}</view>
-    <view class="goods_collect">
-        <text class="iconfont icon-shoucang:before"></text>
+    <view class="goods_collect" bindtap="handleCollect">
+        <text class="iconfont {{isCollect?'.icon-xianxingtubiao-px-shoucang-n:before':'icon-shoucang:before'}}  "></text>
         <view class="collect_text">收藏</view>
     </view>
 </view>

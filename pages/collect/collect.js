@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    collect:[]
   },
 
   /**
@@ -26,7 +26,11 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    var that = this;
+    var collect = wx.getStorageSync('collect') || [];
+    that.setData({
+      collect: collect
+    })
   },
 
   /**

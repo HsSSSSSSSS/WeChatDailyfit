@@ -2,7 +2,6 @@
   "pages": [
     "pages/plan_index/plan_index", 
     "pages/shop_index/shop_index",
-    "pages/social_index/social_index",
     "pages/vivid_index/vivid_index",
     "pages/mine_index/mine_index",
     "pages/goods_detail/goods_detail",
@@ -16,8 +15,6 @@
     "pages/made/made",
     "pages/slim/slim",
     "pages/course/course",
-    "pages/dynamic/dynamic",
-    "pages/write/write",
     "pages/myCourse/myCourse"
   ],
   "window": {   
@@ -33,12 +30,6 @@
     "position": "bottom",
     "borderStyle": "black",
     "list": [
-      {
-        "pagePath": "pages/social_index/social_index",
-        "text": "社区",
-        "iconPath": "icons/social_before.png",
-        "selectedIconPath": "icons/social_after.png"
-      },
       {
         "pagePath": "pages/vivid_index/vivid_index",
         "text": "签到打卡",

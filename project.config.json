@@ -152,6 +152,13 @@
 					"id": -1,
 					"name": "我的课程",
 					"pathName": "pages/myCourse/myCourse",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "签到",
+					"pathName": "pages/vivid_index/vivid_index",
 					"scene": null
 				}
 			]

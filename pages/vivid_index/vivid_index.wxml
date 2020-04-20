@@ -43,6 +43,6 @@
 <view class="vivid_wrap">
     <view class="vivid_title">今日形象</view>
     <view class="vivid_content">
-        <image mode="widthFix" src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2445147000,991496680&fm=26&gp=0.jpg" />
+        <image mode="widthFix" src="{{vImg}}" />
     </view>
 </view>

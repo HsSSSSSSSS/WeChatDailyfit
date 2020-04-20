@@ -3,6 +3,11 @@ var calendarSignData;
 var date;
 var calendarSignDay;
 Page({
+  data:{
+    vImg:'http://xysj.cditv.cn/2015/1125/20151125030520826.jpeg',
+    userinfo:{}
+  },
+
   //事件处理函数
   calendarSign: function() {
    calendarSignData[date]=date;
@@ -16,11 +21,70 @@ Page({
   icon: 'success',
   duration: 2000
 })
-  this.setData({
-      
+  this.setData({   
         calendarSignData:calendarSignData,
         calendarSignDay:calendarSignDay
       })
+
+      var that = this;
+      var count = that.data.calendarSignDay;
+      wx.request({
+        url: 'http://localhost:8080/findVividImg',
+        data: {count},
+        header: {'content-type':'application/json'},
+        method: 'GET',
+        dataType: 'json',
+        responseType: 'text',
+        success: function(res){
+            var vImg = res.data.vividImg;
+            that.setData({
+              vImg: vImg
+            }) 
+            const userinfo = wx.getStorageSync("userinfo");
+            that.setData({
+              userinfo,
+            }) 
+            var username = userinfo.nickName;
+            wx.request({
+              url: 'http://localhost:8080/updatePlan',
+              data: {username},
+              header: {'content-type':'application/json'},
+              method: 'GET',
+              success: function(res) {
+                wx.request({
+                  url: 'http://localhost:8080/fateList',
+                  data: {username},
+                  header: {'content-type':'application/json'},
+                  method: 'GET',
+                  success: function(res) {
+                    var toastText = "恭喜您已完成 "+res.data.fateList+" 计划";
+                    wx.showToast({
+                      title: toastText,
+                      icon: 'none',
+                      duration: 1500,
+                    });  
+                      wx.request({
+                        url: 'http://localhost:8080/deletePlan',
+                        data: {username},
+                        header: {'content-type':'application/json'},
+                        method: 'GET',
+                        success: function(res) {  
+                        },
+                        fail: () => {},
+                        complete: () => {}
+                      }); 
+                  },
+                  fail: () => {},
+                  complete: () => {}
+                }); 
+              },
+              fail: () => {},
+              complete: () => {}
+            }); 
+        },
+        fail: () => {},
+        complete: () => {}
+      });  
   },
   onLoad: function () {
     var mydate=new Date();
@@ -65,5 +129,23 @@ Page({
         calendarSignData:calendarSignData,
         calendarSignDay:calendarSignDay
       })
+      var that = this;
+      var count = that.data.calendarSignDay;
+      wx.request({
+        url: 'http://localhost:8080/findVividImg',
+        data: {count},
+        header: {'content-type':'application/json'},
+        method: 'GET',
+        dataType: 'json',
+        responseType: 'text',
+        success: function(res){
+            var vImg = res.data.vividImg;
+            that.setData({
+              vImg: vImg
+            }) 
+          },
+          fail: () => {},
+          complete: () => {}
+        });  
   }
 })

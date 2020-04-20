@@ -14,12 +14,14 @@ Page({
     goodsImg4:'',
     goodsImg5:'',
     goodsPrice:'',
-    count:''
+    count:'',
+    isCollect: false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
+
   onLoad: function (options) {
     var that = this;
     this.setData({
@@ -101,34 +103,40 @@ Page({
        }
      })
    },
-  //  handleBuy(e){
-  //    var that = this;
-  //   var cartThis = wx.getStorageSync('cartThis') || []
-  //    //判断购物车缓存中是否已存在该货品
-  //    var exist = cartThis.find(function (ele) {
-  //     return ele.id === that.data.goodsId
-  //   })
-  //   if (exist) {
-  //     //如果存在，则增加该货品的购买数量
-  //     exist.quantity = parseInt(exist.quantity) + 1
-  //   } else {
-  //     //如果不存在，传入该货品信息
-  //     cartThis.push({
-  //       id: that.data.goodsId,
-  //       quantity: 1,
-  //       checked:true,
-  //       price: that.data.goodsPrice,
-  //       title: that.data.goodsName,
-  //       goodsPicsInfo: that.data.goodsImg1
-  //     })
-  //   }
-  //   //加入购物车数据，存入缓存
-  //   wx.setStorage({
-  //     key: 'cartThis',
-  //     data: cartThis
-  //   }) 
-  //   wx.redirectTo({
-  //     url: '/pages/payThis/payThis',
-  //   })
-  //  }
+  handleCollect(e){
+     var that = this
+     var collect = wx.getStorageSync('collect') || []
+     console.log(collect)
+     //判断缓存中是否已存在该货品
+     var exist = collect.find(function (ele) {
+       return ele.id === that.data.goodsId
+     })
+     if (exist) {
+     } else {
+       //如果不存在，传入该货品信息
+       collect.push({
+         id: that.data.goodsId,
+         isCollect:true,
+         price: that.data.goodsPrice,
+         title: that.data.goodsName,
+         goodsPicsInfo: that.data.goodsImg1
+       })
+       var isCollect = true;
+       that.setData({
+        isCollect: isCollect
+       })
+     }
+     wx.setStorage({
+       key: 'collect',
+       data: collect,
+       success: function (res) {
+         //添加购物车的消息提示框
+         wx.showToast({
+           title: "收藏成功",
+           icon: "success",
+           durantion: 2000
+         })
+       }
+     })
+  }
 })

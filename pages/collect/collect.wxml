@@ -1,2 +1,19 @@
-<!--pages/collect/collect.wxml-->
-<text>pages/collect/collect.wxml</text>
+<view class="cart_content">
+    <view class="cart_title">我的收藏</view>
+    <view class="cart_main">
+        <view class="cart_item" wx:for="{{collect}}" wx:key="id">
+            <!-- 图片 -->
+            <navigator class="cart_img_wrap">
+                <image mode="widthFix" src="{{item.goodsPicsInfo}}" />
+            </navigator>
+            <!-- 商品信息 -->
+            <view class="cart_info_wrap">
+                <view class="goods_name">{{item.title}}</view>
+                <view class="goods_price_wrap">
+                    <view class="goods_price">￥{{item.price}}</view>
+                </view>
+            </view>
+            
+        </view>
+    </view>
+</view>

@@ -13,6 +13,6 @@
     </view>
     <view class="cu-list menu-avatar" >
         <button class="GoToPlan" bindtap="GoToPlan" data-id="{{item.pid}}">进入课程</button>
-    </view>
+    </view> 
   </view>
 </view>
